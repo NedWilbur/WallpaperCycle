@@ -1,0 +1,45 @@
+{
+  // Rotation
+  // Minutes between automatic wallpaper changes. Valid: 1-10080. Example: 30 for every half hour.
+  "IntervalMinutes": 60,
+
+  // Image matching
+  // Minimum wallpaper dimensions in pixels. Valid: 1-16384. Example: 3440 x 1440 for a 4K ultrawide.
+  "Width": 3440,
+  "Height": 1440,
+  // Allowed relative aspect-ratio difference from the display (0-0.25). Example: 0.10 allows 10%.
+  "AspectRatioTolerance": 0.10,
+
+  // Wallhaven search
+  // Query examples: landscape, +forest +sunset (require both tags), space -text (exclude a tag), @username,
+  // type:jpg, like:wallpaperID, or id:123. id: must be used by itself. Empty means no text filter.
+  // A narrow query may have no matches. See https://wallhaven.cc/help/api#search for query syntax.
+  "Query": "",
+  // Three 0/1 flags in General, Anime, People order. Examples: 100=General, 111=all. Cannot be 000.
+  "Categories": "100",
+  // Three 0/1 flags in SFW, Sketchy, NSFW order. Examples: 100=SFW, 110=SFW+Sketchy. Cannot be 000.
+  // The third flag enables NSFW and requires an API key from https://wallhaven.cc/settings/account.
+  "Purity": "100",
+  "ApiKey": "",
+  // Request timeout in seconds. Valid: 5-300. Example: 60 for a slower connection.
+  "RequestTimeoutSeconds": 30,
+
+  // Sorting and color
+  // Valid sorting: date_added, relevance, random, views, favorites, toplist.
+  // Examples: random for variety, views for popular results. Result pages advance between rotations.
+  "Sorting": "random",
+  // Optional dominant colors, comma-separated: red, pink, purple, blue, cyan, green, yellow, orange, brown, black, gray, white.
+  // Example: "blue,white". The app converts names to Wallhaven color codes.
+  "Colors": "",
+
+  // Black background
+  // Keep the desktop solid black instead of applying rotated images.
+  "BlackBackground": false,
+  // Automatically use black from the start hour to before the end hour, including after wake/sign-in.
+  // Choosing Next wallpaper skips black until the current window ends, then normal rotation resumes.
+  "BlackBackgroundScheduleEnabled": true,
+  // Local 24-hour clock (0-23). Start is inclusive, end is exclusive. Example: 22 to 7 covers overnight.
+  // Defaults: 0 (midnight) to 7 AM.
+  "BlackBackgroundStartHour": 0,
+  "BlackBackgroundEndHour": 7
+}
